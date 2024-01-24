@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="grid grid-cols-6 h-screen">
+        <div class="col-start-3 col-span-2 flex flex-col justify-center items-center">
+            <%- include('header.ejs') %>
+            <h6 class="py-4 text-2xl font-bold">Login to your account</h6>
+            <form action="/session" method="post" class="w-full max-w-sm">
+                <div class="py-3">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
+                    <input type="email" name="email" id="email" class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:border-green-500">
+                </div>
+                <div class="py-3">
+                    <label for="password" class="block text-sm font-medium text-gray-600">Password:</label>
+                    <input type="password" name="password" id="password" class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:border-green-500">
+                </div>
+                <div class="py-3">
+                    <button type="submit" class="bg-green-600 text-white font-medium rounded p-2 w-full">Sign In</button>
+                </div>
+                <%- include('notifications.ejs') %>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

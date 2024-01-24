@@ -1,0 +1,9 @@
+body {
+  background-color: lightgray; /* Change background color to light gray */
+  font-family: "Arial", sans-serif; /* Change font family to Arial or any other desired font */
+}
+
+.Todo-Item:hover .trash-icon {
+  display: inline-block; /* Change the display property for the trash icon on hover */
+  color: red; /* Change the color of the trash icon on hover */
+}
